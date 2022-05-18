@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap4-addon",
+  "name": "bootstrap5-addon",
   "version": "7.0.6",
   "description": "> Extra css classes and helpers for bootstrap 4 grid system.",
   "main": "index.js",
@@ -15,7 +15,7 @@
   },
   "keywords": [
     "bootstrap",
-    "4",
+    "5",
     "addon",
     "extra",
     "classes"
