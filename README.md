@@ -1,0 +1,347 @@
+# Bootstrap4-addon
+> Extra css classes and helpers for bootstrap 4 grid system.
+
+### ASSETS LIST
+* [Aspect ratio](#aspect-ratio)
+* [Extras](#extras)
+* [Images](#images)
+* [Links](#links)
+* [Minimum Heights](#min-heights)
+* [Negative Offsets](#negative-offsets)
+* [Typography](#typography)
+* [Vertical heights](#vertical-heights)
+
+### HOW TO USE IT
+
+cp node_modules/bootstrap4-addon/sass/_variables.scss ./your/local/folder
+
+## Aspect ratio
+For each bootstrap breakpoint adds .ar-$breakpoint-$number class.  
+Class `.ar-md-20` will add a 20% padding-top css rule to the given element.  
+This will effect the height of the element depending the width, so it will maintain its aspect ratio.  
+###### USE
+`.ar-$breakpoint-$number`
+###### DEFAULT VARIABLES
+$number: 5-230 with step 5.  
+
+## Extras
+Reset focus outline & .overflow-hidden & .h-100 classes.
+###### USE
+`.overflow-hidden`  
+`.h-100` height 100%  
+
+## Images
+Adds width to images.  
+Usefull for svg images.  
+Use it with bootstrap's .img-fluid class and with caution!
+###### USE
+`.img-$number`
+###### DEFAULT VARIABLES
+$number: 5-230 with step 5.  
+
+## Links
+Set colors for the links that you will need for your project, in a variables file.
+###### USE
+.link-$color-name
+###### DEFAULT VARIABLES
+$link-colors: (
+    white:   white,
+    black:   black,
+    gray:    gray,
+    red:     red,
+    green:   green,
+    blue:    blue,
+    yellow:  yellow
+)
+
+## Typography
+###### USE
+`.text-wings`  
+`.text-underline`  
+`.text-underline-simple`  
+`.line-height-$number` ($number: 07-20)  
+`.font-weight-$weight`  
+`.display-4` & `display-5`  
+`.xxlarge`, `.xlarge`, `.large`, `.xsmall`, `.xxsmall`, `.xxxsmall`  
+###### DEFAULT VARIABLES
+
+## Vertical heights
+###### USE
+`.vh-$breakpoints-$number`  
+`.vh-max-$breakpoints-$number`  
+###### DEFAULT VARIABLES
+$number: 5-230 with step 5.  
+
+### VARIABLES
+Copy paste this vars in a file.  
+Change the variables according to your needs.  
+Call this file before the scss assets.
+
+``` scss
+/////////////////////////////////////////////////////////////////////////// GRID 
+$grid-columns:                16;
+$grid-gutter-width:           10px;
+ 
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1180px
+) !default;
+ 
+/////////////////////////////////////////////////////////////////////////// COLORS
+$white:    #fff !default;
+$gray-100: #f1f1f1 !default;
+$gray-200: #e2e2e2 !default;
+$gray-300: #ddd !default;
+$gray-400: #d0d0d0 !default;
+$gray-500: #bcbcbc !default;
+$gray-600: #8c8c8c !default;
+$gray-700: #444444 !default;
+$gray-800: #212121 !default;
+$gray-900: #030303 !default;
+$black:    #000 !default;
+ 
+$grays: () !default;
+$grays: map-merge((
+  "100": $gray-100, 
+  "200": $gray-200, 
+  "300": $gray-300, 
+  "400": $gray-400, 
+  "500": $gray-500, 
+  "600": $gray-600, 
+  "700": $gray-700, 
+  "800": $gray-800, 
+  "900": $gray-900 
+), $grays);
+ 
+$blue:         #1e4489 !default;
+$indigo:       #6610f2 !default;
+$purple:       #6f42c1 !default;
+$pink:         #e83e8c !default;
+$red:          #cf202f !default;
+$orange:       #ff8405 !default;
+$yellow:       #ffca05 !default;
+$green:        #42aa29 !default;
+$teal:         #20c997 !default;
+$cyan:         #367fbb !default;
+ 
+$colors: () !default;
+$colors: map-merge((
+  "blue":           $blue,
+  "indigo":         $indigo,
+  "purple":         $purple,
+  "pink":           $pink,
+  "red":            $red,
+  "orange":         $orange,
+  "yellow":         $yellow,
+  "green":          $green,
+  "teal":           $teal,
+  "cyan":           $cyan,
+  "white":          $white,
+  "lightest":       $gray-100,
+  "lighter":        $gray-200,
+  "light":          $gray-300,
+  "medium":         $gray-500,
+  "gray":           $gray-400,
+  "dark":           $gray-600,
+  "darker":         $gray-700,
+  "darkest":        $gray-800
+), $colors);
+ 
+$primary:       $white !default;
+$secondary:     $black !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $orange !default;
+$red:           $red !default;
+$danger:        $red !default;
+$lightest:      $gray-100 !default;
+$lighter:       $gray-200 !default;
+$light:         $gray-300 !default;
+$medium:        $gray-400 !default;
+$gray:          $gray-500 !default;
+$dark:          $gray-600 !default;
+$darker:        $gray-700 !default;
+$darkest:       $gray-800 !default;
+ 
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "primary":    $primary, 
+  "secondary":  $secondary, 
+  "success":    $success, 
+  "info":       $info, 
+  "warning":    $warning, 
+  "danger":     $danger, 
+  "lightest":   $lightest,
+  "lighter":    $lighter, 
+  "light":      $light, 
+  "medium":     $medium, 
+  "gray":       $gray, 
+  "dark":       $dark, 
+  "darker":     $darker, 
+  "darkest":    $darkest,
+  "black":      $black 
+), $theme-colors);
+ 
+$body-bg: #fff !default;
+ 
+/////////////////////////////////////////////////////////////////////////// FONTS
+$enable-responsive-font-sizes: true !default;
+$rfs-two-dimensional: true !default;
+
+$font-family-sans-serif:      "brother-1816", sans-serif !default;
+$font-family-monospace:       "roboto-slab", serif !default;
+
+$font-weight-thin:            100 !default;
+$font-weight-light:           200 !default;
+$font-weight-book:            300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-regular:         400 !default;
+$font-weight-medium:          500 !default;
+$font-weight-semibold:        700 !default;
+$font-weight-bold:            700 !default;
+$font-weight-exbold:          800 !default;
+$font-weight-black:           900 !default;
+$font-weight-heavy:           900 !default;
+
+$font-size-base:              .875rem !default;
+$font-weight-base:            $font-weight-normal !default;
+$font-spacing-base:           0rem !default;
+$line-height-base:            1 !default;
+$paragraph-margin-bottom:     0rem !default;
+$body-color:                  $black;
+
+$display1-size:               5rem !default;
+$display2-size:               3.75rem !default;
+$display3-size:               3.125rem !default;
+$display4-size:               2.5rem !default;
+$display5-size:               2.1875rem !default;
+$display6-size:               2.0625rem !default;
+ 
+$display1-weight:             $font-weight-light !default;
+$display2-weight:             $font-weight-light !default;
+$display3-weight:             $font-weight-light !default;
+$display4-weight:             $font-weight-light !default;
+$display5-weight:             $font-weight-light !default;
+$display6-weight:             $font-weight-light !default;
+ 
+$display-line-height:         1 !default;
+
+$h1-font-size:                1.9375rem !default;
+$h2-font-size:                1.87rem !default;
+$h3-font-size:                1.6875rem !default;
+$h4-font-size:                1.5625rem !default;
+$h5-font-size:                1.3125rem !default;
+$h6-font-size:                1.25rem !default;
+ 
+$headings-margin-bottom:      0rem !default;
+$headings-font-weight:        $font-weight-light;
+$headings-color:              $black !default;
+
+$font-size-xxxlg:             1.1875rem !default;
+$font-size-xxlg:              1.125rem !default;
+$font-size-xlg:               1.0625rem !default;
+$font-size-lg:                1rem !default;
+$font-size-sm:                0.87rem !default;
+$font-size-xsm:               0.82rem !default;
+$font-size-xxsm:              0.76rem !default;
+$font-size-xxxsm:             0.6875rem !default;
+
+$small-font-size:             96% !default;
+ 
+/////////////////////////////////////////////////////////////////////////// LINKS 
+$link-color:                  $primary !default;
+$link-hover-color:            $secondary !default;
+$link-hover-decoration:       none !default;
+
+$link-colors: (
+    primary: (
+      'color': $primary,
+      'hover': $secondary
+    ),
+    black: (
+      'color': $black,
+      'hover': $white
+    )
+);
+ 
+/////////////////////////////////////////////////////////////////////////// SPACERS 
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge((
+  0: 0, 
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 2),
+  6: ($spacer * 2.5),
+  7: ($spacer * 3),
+  8: ($spacer * 3.5),
+  9: ($spacer * 4),
+  10: ($spacer * 4.5),
+  11: ($spacer * 5),
+  12: ($spacer * 5.5),
+  13: ($spacer * 6),
+  14: ($spacer * 6.5),
+  15: ($spacer * 7),
+  16: ($spacer * 7.5),
+  17: ($spacer * 8),
+  18: ($spacer * 8.5),
+  19: ($spacer * 9),
+  20: ($spacer * 9.5),
+  21: ($spacer * 10),
+  22: ($spacer * 10.5),
+  23: ($spacer * 11),
+  24: ($spacer * 11.5),
+  25: ($spacer * 12),
+  26: ($spacer * 12.5),
+  27: ($spacer * 13),
+  28: ($spacer * 13.5),
+  29: ($spacer * 14),
+  30: ($spacer * 14.5),
+  31: ($spacer * 15),
+  32: ($spacer * 15.5),
+  33: ($spacer * 16),
+  34: ($spacer * 16.5),
+  35: ($spacer * 17),
+  36: ($spacer * 17.5),
+  37: ($spacer * 18),
+  38: ($spacer * 18.5),
+  39: ($spacer * 19),
+  40: ($spacer * 19.5),
+  50: ($spacer * 25.5)
+), $spacers);
+
+/////////////////////////////////////////////////////////////////////////// SHADOWS 
+$box-shadow-sm: 0px 5px 10px rgba($black, 0.3) !default;
+$box-shadow: 0px 5px 20px rgba($black, 0.2) !default;
+$box-shadow-lg: 0px 5px 30px rgba($black, 0.4) !default;
+
+/////////////////////////////////////////////////////////////////////////// BORDERS 
+$border-color:              $black !default;
+$border-width:              1px !default;
+ 
+/////////////////////////////////////////////////////////////////////////// ASPECT-RATIOS 
+$aspect-ratios:             100;
+ 
+/////////////////////////////////////////////////////////////////////////// IMAGES 
+$image-widths:              110;
+
+/////////////////////////////////////////////////////////////////////////// MIN HEIGHTS 
+$min-heights:               800;
+ 
+/////////////////////////////////////////////////////////////////////////// VERTICAL HEIGHTS 
+$vertical-heights:          200;
+
+/////////////////////////////////////////////////////////////////////////// FONT SIZES 
+$font-sizes:                0.1;
+
+
+```
+
+## Contribute
+npm version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease [--preid=<prerelease-id>] | from-git]  
+npm version [major | minor | patch] -m "Upgrade to %s for reasons"  
+npm publish  
