@@ -40,25 +40,6 @@ ul.no-style {
     text-decoration: underline;
 }
 
-.display-4,
-.display-5,
-.display-6 {
-    font-weight: $display-font-weight;
-    line-height: $display-line-height;
-}
-
-.display-4 {
-    @include font-size($display4-size);
-}
-
-.display-5 {
-    @include font-size($display5-size);
-}
-
-.display-6 {
-    @include font-size($display6-size);
-}
-
 .xxxlarge {
     @include font-size($font-size-xxxlg);
 }
