@@ -6,6 +6,7 @@ ul.no-style {
     padding: 0;
     margin: 0;
     list-style: none;
+    font-size: 0;
 }
 
 // Responsive justify
@@ -74,4 +75,8 @@ ul.no-style {
 
 .tiny {
     @include font-size($font-size-tiny);
+}
+
+.xtiny {
+    @include font-size($font-size-xtiny);
 }
