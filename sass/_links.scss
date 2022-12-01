@@ -1,0 +1,57 @@
+button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+:focus {
+    outline: none;
+}
+
+.svg-link {
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.link-underline {
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+@each $name,
+$color in $link-colors {
+    .link-#{$name} {
+        color: map-get($color, 'color') !important;
+        transition: color 250ms ease-out;
+
+        *:not(i) {
+            color: map-get($color, 'color') !important;
+            transition: color 250ms ease-out;
+        }
+
+        &:hover,
+        &.active {
+            color: map-get($color, 'hover') !important;
+
+            *:not(i) {
+                color: map-get($color, 'hover') !important;
+            }
+        }
+    }
+}

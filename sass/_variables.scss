@@ -1,0 +1,46 @@
+/////////////////////////////////////////////////////////////////////////// FONTS 
+$font-spacing-base:           0rem !default;
+
+$font-size-xxxlg:             1.1875rem !default;
+$font-size-xxlg:              1.125rem !default;
+$font-size-xlg:               1.0625rem !default;
+$font-size-lg:                1rem !default;
+$font-size-sm:                0.87rem !default;
+$font-size-xsm:               0.82rem !default;
+$font-size-xxsm:              0.76rem !default;
+$font-size-xxxsm:             0.6875rem !default;
+$font-size-tiny:              0.625rem !default;
+$font-size-xtiny:             0.5625rem !default;
+
+$display1-size:               7.5rem !default;
+$display2-size:               4.375rem !default;
+$display3-size:               3.4375rem !default;
+$display4-size:               3.125rem !default;
+$display5-size:               2.5rem !default;
+$display6-size:               2.0625rem !default;
+
+$display-font-weight:         300 !default;
+
+/////////////////////////////////////////////////////////////////////////// LINKS 
+$link-colors: (
+    primary: (
+      'color': #fff,
+      'hover': #000
+    ),
+    black: (
+      'color': #000,
+      'hover': #fff
+    )
+);
+
+/////////////////////////////////////////////////////////////////////////// ASPECT-RATIOS 
+$aspect-ratios:             100;
+ 
+/////////////////////////////////////////////////////////////////////////// IMAGES 
+$image-widths:              110;
+
+/////////////////////////////////////////////////////////////////////////// MIN HEIGHTS 
+$min-heights:               800;
+ 
+/////////////////////////////////////////////////////////////////////////// VERTICAL HEIGHTS 
+$vertical-heights:          200;

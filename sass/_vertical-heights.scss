@@ -1,0 +1,12 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        @each $height in $vertical-heights {
+            .vh#{$infix}-#{$height} {
+                height: 0 + $height + vh + "!important"
+            }
+        }
+
+    }
+}
