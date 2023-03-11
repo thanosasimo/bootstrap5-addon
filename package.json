@@ -4,9 +4,9 @@
   "description": "> Extra css classes and helpers for bootstrap 5 grid system.",
   "main": "index.js",
   "scripts": {
-    "build": "node-sass --output-style compressed sass/bootstrap5-addon.scss > dist/bootstrap5-addon.min.css",
-    "dev": "node-sass sass/bootstrap5-addon.scss > dist/bootstrap5-addon.css",
-    "watch": "node-sass --watch sass/bootstrap5-addon.scss -o dist"
+    "build": "node-sass --output-style compressed sass/bootstrap5-addon.scss > dist/css/bootstrap5-addon.min.css",
+    "dev": "node-sass sass/bootstrap5-addon.scss > dist/css/bootstrap5-addon.css",
+    "watch": "node-sass --watch sass/bootstrap5-addon.scss -o dist/css"
   },
   "repository": {
     "type": "git",
