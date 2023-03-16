@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node-sass --output-style compressed sass/bootstrap5-addon.scss > dist/css/bootstrap5-addon.min.css",
+    "bootstrap": "node-sass --output-style compressed sass/bootstrap.scss > dist/css/bootstrap.min.css",
     "dev": "node-sass sass/bootstrap5-addon.scss > dist/css/bootstrap5-addon.css",
     "watch": "node-sass --watch sass/bootstrap5-addon.scss -o dist/css"
   },
