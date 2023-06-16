@@ -2,7 +2,7 @@
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    @for $i from 1 through $grid-columns {
+    @for $i from 0 through $grid-columns {
       .offset#{$infix}-n#{$i} {
         margin-left: 0% - 100 / $grid-columns * $i;
       }

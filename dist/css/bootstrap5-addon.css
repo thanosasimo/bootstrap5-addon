@@ -115,6 +115,9 @@ button {
   .min-h-xxl-800 {
     min-height: 800px; } }
 
+.offset-n0 {
+  margin-left: 0%; }
+
 .offset-n1 {
   margin-left: -8.33333%; }
 
@@ -152,6 +155,8 @@ button {
   margin-left: -100%; }
 
 @media (min-width: 576px) {
+  .offset-sm-n0 {
+    margin-left: 0%; }
   .offset-sm-n1 {
     margin-left: -8.33333%; }
   .offset-sm-n2 {
@@ -178,6 +183,8 @@ button {
     margin-left: -100%; } }
 
 @media (min-width: 768px) {
+  .offset-md-n0 {
+    margin-left: 0%; }
   .offset-md-n1 {
     margin-left: -8.33333%; }
   .offset-md-n2 {
@@ -204,6 +211,8 @@ button {
     margin-left: -100%; } }
 
 @media (min-width: 992px) {
+  .offset-lg-n0 {
+    margin-left: 0%; }
   .offset-lg-n1 {
     margin-left: -8.33333%; }
   .offset-lg-n2 {
@@ -230,6 +239,8 @@ button {
     margin-left: -100%; } }
 
 @media (min-width: 1200px) {
+  .offset-xl-n0 {
+    margin-left: 0%; }
   .offset-xl-n1 {
     margin-left: -8.33333%; }
   .offset-xl-n2 {
@@ -256,6 +267,8 @@ button {
     margin-left: -100%; } }
 
 @media (min-width: 1400px) {
+  .offset-xxl-n0 {
+    margin-left: 0%; }
   .offset-xxl-n1 {
     margin-left: -8.33333%; }
   .offset-xxl-n2 {
